@@ -1,0 +1,4 @@
+To compile a Qt resource file:
+
+     $ pyrcc5 terp.qrc -o terp_rc.py
+

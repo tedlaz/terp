@@ -3,7 +3,7 @@ from argparse import ArgumentParser, REMAINDER
 
 try:
     from classes import info
-    print('Loaded parameters from current directory: %s' % info.PATH)
+    print('Loaded normally parameters from current directory: %s' % info.PATH)
 except ImportError:
     print('Error importing trying differently')
     import terp
@@ -32,10 +32,9 @@ def main():
         argv.append(arg)
 
     app = TerpApp(argv)
-    sys.exit(app.run())
+    # Passing info into run function in order to create settings file
+    sys.exit(app.run(info))
 
 
 if __name__ == '__main__':
-    print('running')
-    print(info.CWD)
     main()

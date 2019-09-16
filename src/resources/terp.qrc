@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/terp.svg</file>
+        <file>images/terp.png</file>
+    </qresource>
+</RCC>
