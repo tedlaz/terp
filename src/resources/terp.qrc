@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>images/terp.svg</file>
-        <file>images/terp.png</file>
+	<file>images/open.svg</file>
+        <file>images/new.svg</file>
     </qresource>
 </RCC>

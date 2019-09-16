@@ -20,6 +20,7 @@ def get_app():
 class TerpApp(QApplication):
     def __init__(self, *args, mode=None):
         QApplication.__init__(self, *args)
+        self.mode = mode
 
         try:
             from classes import info
@@ -57,14 +58,14 @@ class TerpApp(QApplication):
             pass
 
         self.aboutToQuit.connect(self.onLogTheEnd)
-        from windows.main_window import MainWindow
-        self.window = MainWindow(mode)
 
     def run(self, minfo):
         self.setOrganizationName(minfo.COMPANY_NAME)
         self.setOrganizationDomain(minfo.ORG_DOMAIN)
-        self.setApplicationName(minfo.PRODUCT_NAME)
+        self.setApplicationName(minfo.NAME)
         self.settings = QSettings()
+        from windows.main_window import MainWindow
+        self.window = MainWindow(self.mode)
         self.window.show()
         res = self.exec_()
         # put code here

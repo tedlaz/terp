@@ -21,14 +21,16 @@ class MainWindow(Qw.QMainWindow):
         self.create_toolbars()
         self.statusBar().showMessage("")  # Απαραίτητο για να ενεργοποιηθεί
         self.setWindowIcon(Qg.QIcon(':/images/terp.svg'))
+        self.update_ui()
 
     def create_actions(self):
         self.action_new = Qw.QAction(
-            Qg.QIcon(":/images/terp.png"),
+            Qg.QIcon(":/images/new.svg"),
             "&Nέο", self, statusTip='Nέο αρχείο',
             triggered=self.trg_new
         )
         self.action_open = Qw.QAction(
+            Qg.QIcon(":/images/open.svg"),
             "Άνοιξε", self, statusTip='Άνοιγμα αρχείου',
             triggered=self.trg_open
         )
@@ -41,12 +43,18 @@ class MainWindow(Qw.QMainWindow):
     def create_toolbars(self):
         self.toolbar_file = self.addToolBar('File')
         self.toolbar_file.addAction(self.action_new)
+        self.toolbar_file.addAction(self.action_open)
 
     def trg_open(self):
         oldfnam = self.app.settings.value("filename", defaultValue=None)
         fnam, _ = Qw.QFileDialog.getOpenFileName(self, 'Open', oldfnam, '')
         if fnam:
             self.app.settings.setValue("filename", fnam)
+            self.update_ui()
 
     def trg_new(self):
         Qw.QMessageBox.information(self, 'new', "not ready yet :-(")
+
+    def update_ui(self):
+        fname = self.app.settings.value("filename", defaultValue=None)
+        self.setWindowTitle(f'TERP : {fname}')
