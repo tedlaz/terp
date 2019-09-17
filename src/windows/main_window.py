@@ -46,8 +46,8 @@ class MainWindow(Qw.QMainWindow):
         self.toolbar_file.addAction(self.action_open)
 
     def trg_open(self):
-        oldfnam = self.app.settings.value("filename", defaultValue=None)
-        fnam, _ = Qw.QFileDialog.getOpenFileName(self, 'Open', oldfnam, '')
+        fnam_old = self.app.settings.value("filename", defaultValue=None)
+        fnam, _ = Qw.QFileDialog.getOpenFileName(self, 'Open', fnam_old, '')
         if fnam:
             self.app.settings.setValue("filename", fnam)
             self.update_ui()
