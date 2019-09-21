@@ -6,8 +6,6 @@ try:
     print('Loaded normally parameters from current directory: %s' % info.PATH)
 except ImportError:
     print('Error importing trying differently')
-    import terp
-    sys.path.append(terp.TERP_PATH)
     from classes import info
     print('Loaded parameters from current directory: %s' % info.PATH)
 
@@ -20,6 +18,9 @@ def main():
     parser = ArgumentParser(description=f'terp version {info.VERSION}')
     parser.add_argument('-V', '--version', action='store_true')
     parser.add_argument('remain', nargs=REMAINDER)
+    # TODO: Dokimastiko gia toys kaloys
+    #     dfgdf dfgdfg dfgdfg
+    # FIXME: This is a test
 
     args = parser.parse_args()
 

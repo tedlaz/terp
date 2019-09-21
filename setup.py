@@ -9,7 +9,7 @@ if sys.hexversion < 0x3040000:
 
 
 setup(name='terp',
-      version='0.1.0',
+      version='0.1.1',
       description='Accounting and Greek Payroll',
       long_description='A basic ERP system for accounting and payroll',
       url='https://github.com/tedlaz/tedutil',

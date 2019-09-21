@@ -3,5 +3,6 @@
         <file>images/terp.svg</file>
         <file>images/open.svg</file>
         <file>images/new.svg</file>
+        <file>images/close.svg</file>
     </qresource>
 </RCC>
