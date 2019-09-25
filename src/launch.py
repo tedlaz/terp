@@ -6,6 +6,8 @@ try:
     print('Loaded normally parameters from current directory: %s' % info.PATH)
 except ImportError:
     print('Error importing trying differently')
+    import src
+    sys.path.append(src.TERP_PATH)
     from classes import info
     print('Loaded parameters from current directory: %s' % info.PATH)
 

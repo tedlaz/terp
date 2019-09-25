@@ -21,7 +21,7 @@ install:
   - cmd: pip freeze
 
 build_script:
-  - cmd: pyinstaller.exe -w src/launch.py
+  - cmd: pyinstaller.exe -w terp.py
   - cmd: python makensis.py > install.nsi
   - cmd: makensis.exe install.nsi
 
