@@ -35,18 +35,23 @@ def getfiles(root_dir, exe, product_name, product_version, publisher, web, licen
     for dirname, _, filelist in os.walk(root_dir):
         directories.append(dirname.replace(root_dir, '$INSTDIR'))
         if len(filelist) > 0:
-            instal += '  SetOutPath "%s"\n' % dirname.replace(root_dir, '$INSTDIR')
+            instal += '  SetOutPath "%s"\n' % dirname.replace(
+                root_dir, '$INSTDIR')
             for fname in filelist:
                 fullpath = os.path.join(dirname, fname)
                 instal += '  File "%s"\n' % fullpath
-                delete += '  Delete "%s"\n' % fullpath.replace(root_dir, '$INSTDIR')
+                delete += '  Delete "%s"\n' % fullpath.replace(
+                    root_dir, '$INSTDIR')
     instal += '  CreateDirectory "$SMPROGRAMS\\%s"\n' % product_name
-    instal += '  CreateShortCut "$SMPROGRAMS\\%s\%s.lnk" "$INSTDIR\\%s"\n' % (product_name, product_name, exe)
-    instal += '  CreateShortCut "$DESKTOP\%s.lnk" "$INSTDIR\%s"\n' % (product_name, exe)
+    instal += '  CreateShortCut "$SMPROGRAMS\\%s\%s.lnk" "$INSTDIR\\%s"\n' % (
+        product_name, product_name, exe)
+    instal += '  CreateShortCut "$DESKTOP\%s.lnk" "$INSTDIR\%s"\n' % (
+        product_name, exe)
     delete += '\n'
     delete += '  Delete "$SMPROGRAMS\\%s\\Uninstall.lnk"\n' % product_name
     delete += '  Delete "$DESKTOP\\%s.lnk"\n' % product_name
-    delete += '  Delete "$SMPROGRAMS\\%s\\%s.lnk"\n' % (product_name, product_name)
+    delete += '  Delete "$SMPROGRAMS\\%s\\%s.lnk"\n' % (
+        product_name, product_name)
     delete += '\n'
     delete += '  ;Remove directories\n'
 
@@ -99,9 +104,9 @@ def create_nsis(filename, productname, version, publisher, website):
 
 
 if __name__ == "__main__":
-    MAIN_FILE = "qminoracc"
-    PRODUCT = "qminoracc"
-    VERSION = "1.0.8"
+    MAIN_FILE = "terp"
+    PRODUCT = "terp"
+    VERSION = "1.0.3"
     PUBLISHER = "Ted Lazaros 2019"
-    WEBSITE = "http://greeklinks.000webhostapp.com"
+    WEBSITE = "https://tedlaz.github.io/weblinks"
     print(create_nsis(MAIN_FILE, PRODUCT, VERSION, PUBLISHER, WEBSITE))
