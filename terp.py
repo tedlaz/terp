@@ -1,3 +1,3 @@
-from src import launch
+from terp import launch
 
 launch.main()

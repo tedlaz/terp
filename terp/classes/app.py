@@ -1,5 +1,7 @@
 import platform
+import traceback
 from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtCore import Qt
 from PyQt5.QtCore import QT_VERSION_STR
 from PyQt5.QtCore import PYQT_VERSION_STR
@@ -23,8 +25,8 @@ class TerpApp(QApplication):
         self.mode = mode
 
         try:
-            from classes import info
-            from classes.logger import log
+            from terp.classes import info
+            from terp.classes.logger import log
 
             import time
 
@@ -64,7 +66,7 @@ class TerpApp(QApplication):
         self.setOrganizationDomain(minfo.ORG_DOMAIN)
         self.setApplicationName(minfo.NAME)
         self.settings = QSettings()
-        from windows.main_window import MainWindow
+        from terp.windows.main_window import MainWindow
         self.window = MainWindow(self.mode)
         self.window.show()
         res = self.exec_()
@@ -76,7 +78,7 @@ class TerpApp(QApplication):
     def onLogTheEnd(self):
         """ Log when the primary Qt event loop ends """
         try:
-            from classes.logger import log
+            from terp.classes.logger import log
             import time
             log.info('-' * 60)
             log.info('terp\'s session ended'.center(60))

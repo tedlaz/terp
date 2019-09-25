@@ -1,9 +1,9 @@
 import PyQt5.QtWidgets as Qw
 import PyQt5.QtCore as Qc
 import PyQt5.QtGui as Qg
-from classes import info
-from resources import terp_rc
-from classes.app import get_app
+from terp.classes import info
+from terp.resources import terp_rc
+from terp.classes.app import get_app
 
 
 class MainWindow(Qw.QMainWindow):

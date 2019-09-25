@@ -1,18 +1,7 @@
 import sys
 from argparse import ArgumentParser, REMAINDER
-
-try:
-    from classes import info
-    print('Loaded normally parameters from current directory: %s' % info.PATH)
-except ImportError:
-    print('Error importing trying differently')
-    import src
-    sys.path.append(src.TERP_PATH)
-    from classes import info
-    print('Loaded parameters from current directory: %s' % info.PATH)
-
-
-from classes.app import TerpApp
+from terp.classes import info
+from terp.classes.app import TerpApp
 
 
 def main():

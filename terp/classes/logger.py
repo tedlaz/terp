@@ -4,7 +4,7 @@ import os
 import sys
 import logging
 from logging.handlers import RotatingFileHandler
-from classes import info
+from terp.classes import info
 
 
 logging.basicConfig(
