@@ -8,7 +8,7 @@ if sys.hexversion < 0x3040000:
     exit(1)
 
 
-setup(name='terp',
+setup(name='qterp',
       version='0.1.1',
       description='Accounting and Greek Payroll',
       long_description='A basic ERP system for accounting and payroll',

@@ -49,7 +49,7 @@ class TerpApp(QApplication):
 
         try:
             log.info('-' * 60)
-            log.info(f'terp version: {info.VERSION}')
+            log.info(f'qterp version: {info.VERSION}')
             log.info(f'os: {platform.platform()}')
             log.info(f'processor: {platform.processor()}')
             log.info(f'machine: {platform.machine()}')
@@ -81,7 +81,7 @@ class TerpApp(QApplication):
             from terp.classes.logger import log
             import time
             log.info('-' * 60)
-            log.info('terp\'s session ended'.center(60))
+            log.info('qterp\'s session ended'.center(60))
             log.info(time.asctime().center(60))
             log.info('=' * 60)
         except Exception:

@@ -15,11 +15,11 @@ logging.basicConfig(
 
 formatter = logging.Formatter('%(module)12s:%(levelname)s %(message)s')
 
-log = logging.getLogger('terp')
+log = logging.getLogger('qterp')
 log.setLevel(logging.INFO)
 
 fh = RotatingFileHandler(
-    os.path.join(info.USER_PATH, 'openshot-qt.log'),
+    os.path.join(info.USER_PATH, 'qterp.log'),
     encoding="utf-8",
     maxBytes=25*1024*1024,
     backupCount=3

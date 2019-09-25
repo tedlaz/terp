@@ -6,7 +6,7 @@ from terp.classes.app import TerpApp
 
 def main():
     """Create Main Window"""
-    parser = ArgumentParser(description=f'terp version {info.VERSION}')
+    parser = ArgumentParser(description=f'qterp version {info.VERSION}')
     parser.add_argument('-V', '--version', action='store_true')
     parser.add_argument('remain', nargs=REMAINDER)
     # TODO: Dokimastiko gia toys kaloys
@@ -16,7 +16,7 @@ def main():
     args = parser.parse_args()
 
     if args.version:
-        print(f'terp version {info.VERSION}')
+        print(f'qterp version {info.VERSION}')
         sys.exit()
 
     argv = [sys.argv[0]]

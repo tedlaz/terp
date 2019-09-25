@@ -15,7 +15,7 @@ COPYRIGHT = "Copyright (c) 2008-2018 %s" % COMPANY_NAME
 CWD = os.getcwd()
 PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 HOME_PATH = os.path.join(os.path.expanduser("~"))
-USER_PATH = os.path.join(HOME_PATH, ".terp")
+USER_PATH = os.path.join(HOME_PATH, ".qterp")
 BACKUP_PATH = os.path.join(USER_PATH, 'backup')
 ASSETS_PATH = os.path.join(USER_PATH, "assets")
 
