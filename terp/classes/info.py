@@ -3,7 +3,7 @@ import os
 
 from PyQt5.QtCore import QDir
 
-VERSION = '1.0.11'
+VERSION = '1.0.12'
 DATE = '20190916000000'
 NAME = 'TERP'
 PRODUCT_NAME = 'Ted ERP'
@@ -11,7 +11,7 @@ GPL_VERSION = '3'
 DECRIPTION = 'Mini ERP system caontaining Accounting and Payroll'
 COMPANY_NAME = 'TedSoft'
 ORG_DOMAIN = 'tedlaz'
-COPYRIGHT = "Copyright (c) 2008-2018 %s" % COMPANY_NAME
+COPYRIGHT = "Copyright (c) 2008-2019 %s" % COMPANY_NAME
 CWD = os.getcwd()
 PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 HOME_PATH = os.path.join(os.path.expanduser("~"))
