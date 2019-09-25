@@ -104,9 +104,10 @@ def create_nsis(filename, productname, version, publisher, website):
 
 
 if __name__ == "__main__":
+    from terp.classes.info import VERSION
     MAIN_FILE = "qterp"
     PRODUCT = "qterp"
-    VERSION = "1.0.6"
+    # VERSION = "1.0.22"
     PUBLISHER = "Ted Lazaros 2019"
     WEBSITE = "https://tedlaz.github.io/weblinks"
     print(create_nsis(MAIN_FILE, PRODUCT, VERSION, PUBLISHER, WEBSITE))

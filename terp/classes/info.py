@@ -3,7 +3,7 @@ import os
 
 from PyQt5.QtCore import QDir
 
-VERSION = '0.1.0'
+VERSION = '1.0.30'
 DATE = '20190916000000'
 NAME = 'TERP'
 PRODUCT_NAME = 'Ted ERP'

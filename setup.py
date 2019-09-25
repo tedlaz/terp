@@ -1,5 +1,6 @@
 import sys
 from setuptools import setup
+from terp.classes.info import VERSION
 
 
 if sys.hexversion < 0x3040000:
@@ -9,7 +10,7 @@ if sys.hexversion < 0x3040000:
 
 
 setup(name='qterp',
-      version='0.1.1',
+      version=VERSION,
       description='Accounting and Greek Payroll',
       long_description='A basic ERP system for accounting and payroll',
       url='https://github.com/tedlaz/tedutil',
