@@ -1,10 +1,10 @@
 image:
-  - Visual Studio 2017
+  - Visual Studio 2019
 
 stack: python 3
 
 environment:
-    PY_DIR: C:\Python37-x64
+  PY_DIR: C:\Python37-x64
 
 platform:
   - x64
@@ -21,7 +21,7 @@ install:
   - cmd: pip freeze
 
 build_script:
-  - cmd: pyinstaller.exe -w qminoracc.py
+  - cmd: pyinstaller.exe -w src/qminoracc.py
   - cmd: python makensis.py > install.nsi
   - cmd: makensis.exe install.nsi
 
@@ -41,5 +41,5 @@ deploy:
   draft: false
   prerelease: false
   on:
-    branch: master                 # release from master branch only
-    APPVEYOR_REPO_TAG: true        # deploy on tag push only
+    branch: master # release from master branch only
+    APPVEYOR_REPO_TAG: true # deploy on tag push only
