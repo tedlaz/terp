@@ -106,7 +106,7 @@ def create_nsis(filename, productname, version, publisher, website):
 if __name__ == "__main__":
     MAIN_FILE = "terp"
     PRODUCT = "terp"
-    VERSION = "1.0.3"
+    VERSION = "1.0.6"
     PUBLISHER = "Ted Lazaros 2019"
     WEBSITE = "https://tedlaz.github.io/weblinks"
     print(create_nsis(MAIN_FILE, PRODUCT, VERSION, PUBLISHER, WEBSITE))
