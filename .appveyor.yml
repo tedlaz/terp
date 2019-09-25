@@ -21,7 +21,7 @@ install:
   - cmd: pip freeze
 
 build_script:
-  - cmd: pyinstaller.exe -w qterp.py
+  - cmd: pyinstaller.exe -w --icon=terp.ico qterp.py
   - cmd: python makensis.py > install.nsi
   - cmd: makensis.exe install.nsi
 
